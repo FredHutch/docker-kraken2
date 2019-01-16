@@ -3,8 +3,8 @@ MAINTAINER sminot@fredhutch.org
 
 # Download database
 RUN mkdir /database
-ADD https://ccb.jhu.edu/software/kraken2/dl/minikraken2_v1_8GB.tgz /database/minikraken2_v1_8GB.tgz
 RUN cd /database/ && \
+    wget http://ccb.jhu.edu/software/kraken2/dl/minikraken2_v1_8GB.tgz && \
     gunzip -c minikraken2_v1_8GB.tgz | \
     tar -xvf - && \
     rm minikraken2_v1_8GB.tgz
