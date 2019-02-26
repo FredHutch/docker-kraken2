@@ -11,7 +11,8 @@ RUN cd /usr/ && \
     wget http://github.com/DerrickWood/kraken2/archive/v2.0.7-beta.tar.gz && \
     tar xzvf v2.0.7-beta.tar.gz && \
     cd kraken2-2.0.7-beta && \
-    ./install_kraken2.sh /usr/local/bin/kraken2 && \
+    ./install_kraken2.sh /usr/local/bin/kraken2-v2.0.7 && \
+    ln -s /usr/local/bin/kraken2-v2.0.7/kraken2* /usr/local/bin/ && \
     kraken2-build -h
 
 # Download database
