@@ -15,11 +15,3 @@ RUN cd /usr/ && \
     ./install_kraken2.sh /usr/local/bin/kraken2-v2.0.7 && \
     ln -s /usr/local/bin/kraken2-v2.0.7/kraken2* /usr/local/bin/ && \
     kraken2-build -h
-
-# Download database
-RUN mkdir /database
-RUN cd /database/ && \
-    wget http://ccb.jhu.edu/software/kraken2/dl/minikraken2_v1_8GB.tgz && \
-    gunzip -c minikraken2_v1_8GB.tgz | \
-    tar -xvf - && \
-    rm minikraken2_v1_8GB.tgz
