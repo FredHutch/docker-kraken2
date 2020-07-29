@@ -1,10 +1,10 @@
 FROM ubuntu:20.04
-LABEL sminot@fredhutch.org
+MAINTAINER sminot@fredhutch.org
 
 # Install prerequisites
 RUN apt update && \
-    apt-get install -y build-essential wget unzip python2.7 \
-    python-dev git python-pip curl autoconf autogen libssl-dev \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential wget unzip python3 \
+    python3-dev git python3-pip curl autoconf autogen libssl-dev \
     ncbi-blast+
 
 # Install kraken2
