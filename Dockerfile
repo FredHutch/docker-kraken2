@@ -5,7 +5,7 @@ MAINTAINER sminot@fredhutch.org
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential wget unzip python3 \
     python3-dev git python3-pip curl autoconf autogen libssl-dev \
-    ncbi-blast+
+    ncbi-blast+ rsync grsync
 
 # Install kraken2
 RUN cd /usr/ && \
